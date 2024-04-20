@@ -291,6 +291,13 @@ def Edit_or_Delete_Task(pending_tasks):
                             with open("tareas_pendientes.txt", "w") as Tpendientes:
                                 for x in range (len(tareas_pendientes)):
                                     Tpendientes.write(f"{tareas_pendientes[x]}\n")
+
+                        elif choice == "2": #borrar tarea
+                            tareas_pendientes.pop(task_number)
+                            with open("tareas_pendientes.txt", "w") as Tpendientes:
+                                for x in range (len(tareas_pendientes)):
+                                    Tpendientes.write(f"{tareas_pendientes[x]}\n")
+                            print("\nLa tarea ha sido eliminada satisfactoriamente.")
                         
                     break
 
